@@ -12,7 +12,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "echo 'No build step defined' && exit 0", 
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
