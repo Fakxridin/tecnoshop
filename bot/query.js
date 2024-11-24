@@ -7,7 +7,11 @@ const {
   editCategory,
   getAllCategories,
 } = require('./helper/category');
-const { showProduct, addProduct, deleteProduct, editProduct } = require('./helper/product');
+const {
+   showProduct, 
+   addProduct,
+   deleteProduct, 
+   editProduct } = require('./helper/product');
 const {
   addToCartProd,
   deleteFromCart,
