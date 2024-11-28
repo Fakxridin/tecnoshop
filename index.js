@@ -4,7 +4,7 @@ const app = express();
 require('dotenv').config();
 
 app.use(express.json());
-
+const { bot } = require('./bot/bot')
 // Require the bot module (make sure you handle any bot logic there)
 require('./bot/bot');
 
@@ -15,6 +15,11 @@ app.get('/health', (req, res) => {
         timestamp: new Date(),
         message: 'Server is running smoothly!'
     });
+});
+
+app.post('/webhook', (req, res) => {
+    bot.processUpdate(req.body);
+    res.sendStatus(200);
 });
 
 const PORT = process.env.PORT || 3006;
